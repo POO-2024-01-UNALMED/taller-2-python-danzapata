@@ -36,7 +36,8 @@ class Auto:
     def cantidadAsientos(self):
         oky = 0
         for i in self.asientos:
-            oky = oky+1 
+            if i != None:
+                oky = oky+1 
         return oky
 
     def verificarIntegridad(self):
