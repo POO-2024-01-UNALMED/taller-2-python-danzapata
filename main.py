@@ -30,17 +30,22 @@ class Auto:
         self.registro = registro
         self.cantidadCreados = cantidadCreados
 
-    def cantidadAsientos(self, asientos):
+    def cantidadAsientos(self):
         oky = 0
-        for i in asientos:
+        for i in self.asientos:
             oky = oky+1 
         return oky
 
-    def verificarIntegridad(self, registro):
-        if (Asiento.self.registro==Motor.self.registro) and (Motor.self.registro==Auto.self.registro):
-            return "Auto original"
-        else:
+    def verificarIntegridad(self):
+        if self.registro!=self.motor.registro:
             return "Las piezas no son originales"
+        
+        for i in self.asientos:
+            if i != None:
+                if self.registro!=i.registro:
+                    return "Las piezas no son originales"
+                
+        return "Auto original"
 
 
 
