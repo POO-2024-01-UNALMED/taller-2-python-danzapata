@@ -13,12 +13,12 @@ class Motor:
         self.tipo = tipo
         self.registro = registro
 
-    def cambiarRegistro(self, registroN):
-        if (registroN=="gasolina") or (registroN=="electrico"):
-            self.registro = registroN
+    def cambiarRegistro(self, registro):
+            self.registro = registro
     
-    def asignarTipo(self, tipoN):
-        self.tipo = tipoN
+    def asignarTipo(self, tipo):
+        if (tipo=="gasolina") or (tipo=="electrico"):
+           self.tipo = tipo
 
 class Auto:
     def _init_(self, modelo, precio, asientos, marca, motor, registro, cantidadCreados):
